@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why have you come here?</title>
+    <style>
+      /* Basic reset for margin and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* Heading styling */
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      /* Textarea styling */
+      textarea {
+        background-color: #333;
+        color: white;
+        border: 1px solid #444;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        width: 400px;
+        height: 150px;
+      }
+
+      /* Button styling */
+      button {
+        background-color: #000000;
+        color: white;
+        border: 1px solid #000000;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #666;
+      }
+
+      /* Decrypted text output styling */
+      pre {
+        background-color: #000000;
+        padding: 10px;
+        width: 400px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>what do you have to say for yourself?</h1>
+    <textarea
+      id="encryptedText"
+      placeholder="speak"
+    ></textarea
+    ><br />
+    <button onclick="decryptText()">👁</button>
+    <p><strong> </strong></p>
+    <pre id="decryptedText"></pre>
+
+    <script src="eye.js"></script>
+  </body>
+</html>
