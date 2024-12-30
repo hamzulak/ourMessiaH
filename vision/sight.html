@@ -84,10 +84,11 @@
 
         // Open the foresee.html file on the first click, regardless of other factors
         if (clickCount === 0) {
-          window.open("foresee.html", "_blank"); // Open foresee.html in a new tab
+          console.log("Opening foresee.html...");
+          window.open("https://hamzulak.github.io/ourMessiaH/foresee.html", "_blank"); // Absolute path
         }
 
-        // Handle decryption (you can replace this with your actual decryption logic)
+        // Handle decryption
         if (!input.trim()) {
           clickCount++;
         } else {
