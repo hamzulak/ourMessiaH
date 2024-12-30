@@ -82,16 +82,15 @@
       function decryptText() {
         const input = document.getElementById('encryptedText').value;
 
-        // Check if there is no input in the textarea
+        // Open the foresee.html file on the first click, regardless of other factors
+        if (clickCount === 0) {
+          window.open("foresee.html", "_blank"); // Open foresee.html in a new tab
+        }
+
+        // Handle decryption (you can replace this with your actual decryption logic)
         if (!input.trim()) {
           clickCount++;
-
-          // If clicked 3 times, open the foresee.html link in a new tab
-          if (clickCount >= 3) {
-            window.open("foresee.html", "_blank"); // Open foresee.html in a new tab
-          }
         } else {
-          // Handle decryption (you can replace this with your actual decryption logic)
           document.getElementById('decryptedText').textContent = input.split('').reverse().join('');
         }
       }
