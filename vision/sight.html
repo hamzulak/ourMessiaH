@@ -76,6 +76,25 @@
     <p><strong> </strong></p>
     <pre id="decryptedText"></pre>
 
-    <script src="eye.js"></script>
+    <script>
+      let clickCount = 0; // Track the number of button clicks
+
+      function decryptText() {
+        const input = document.getElementById('encryptedText').value;
+
+        // Check if there is no input in the textarea
+        if (!input.trim()) {
+          clickCount++;
+
+          // If clicked 3 times, open the link in a new tab
+          if (clickCount >= 3) {
+            window.open("https://hamzulak.github.io/ourMessiaH/vision/foresee.html", "_blank");
+          }
+        } else {
+          // Handle decryption (you can replace this with your actual decryption logic)
+          document.getElementById('decryptedText').textContent = input.split('').reverse().join('');
+        }
+      }
+    </script>
   </body>
 </html>
