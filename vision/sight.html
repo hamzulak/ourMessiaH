@@ -67,33 +67,32 @@
   </head>
   <body>
     <h1>what do you have to say for yourself?</h1>
-    <textarea
-      id="encryptedText"
-      placeholder="speak"
-    ></textarea
-    ><br />
-    <button onclick="decryptText()">👁</button>
+    <textarea id="encryptedText" placeholder="speak"></textarea><br />
+    <button onclick="handleDecryption()">Decrypt</button>
+    <button onclick="handleEncryption()">Encrypt</button>
     <p><strong> </strong></p>
     <pre id="decryptedText"></pre>
 
+    <script src="eye.js"></script>
     <script>
       let clickCount = 0; // Track the number of button clicks
 
-      function decryptText() {
-        const input = document.getElementById('encryptedText').value;
-
-        // Open the foresee.html file on the first click, regardless of other factors
+      function handleRedirection() {
         if (clickCount === 0) {
           console.log("Opening foresee.html...");
-          window.open("https://hamzulak.github.io/foresight/foresee.html", "_blank"); // Absolute path
+          window.open("https://hamzulak.github.io/foresight/foresee.html", "_blank");
         }
+        clickCount++;
+      }
 
-        // Handle decryption
-        if (!input.trim()) {
-          clickCount++;
-        } else {
-          document.getElementById('decryptedText').textContent = input.split('').reverse().join('');
-        }
+      function handleDecryption() {
+        handleRedirection();
+        decryptText(); // Calls the function from eye.js
+      }
+
+      function handleEncryption() {
+        handleRedirection();
+        encryptText(); // Calls the function from eye.js
       }
     </script>
   </body>
